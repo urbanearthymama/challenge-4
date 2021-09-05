@@ -18,11 +18,11 @@ This section should list any major frameworks that you built your project using.
 * CSS
 * JavaScript
 
-##Installation
+###Installation
 Clone the repo
 git clone https://github.com/urbanearthymama/challenge-4
 
-##Contact
+###Contact
 
 Patricia Nelson urbanearthymama@gmail.com
 
