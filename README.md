@@ -1,4 +1,5 @@
 # Coding Quiz - Challenge 4
+A timed multiple choice coding quiz. Wrong answers should deduct from the over all time. Once the quiz is over a high score with initials to be logged. 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -9,7 +10,8 @@
 
 
 ### About the Project
-![Product Name Screen Shot][product-screenshot]
+
+![Screen shot](./assets/images/screen-shot.png)
 
 ### Built With
 
