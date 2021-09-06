@@ -2,12 +2,13 @@ let startButton = document.querySelector(".start-btn")
 let startQuizBox = document.querySelector(".start-quiz-box")
 let questionsBox = document.querySelector(".questions-box")
 
+var message = 'All done! Your final score is ' 
 var timeLeft = 75;
 var timer = setInterval(() => {
     timeLeft--;
     if (timeLeft <=0) {
         clearInterval(timer);
-        quizOver();
+        displayMessage();
     }
 
     console.log(timeLeft);

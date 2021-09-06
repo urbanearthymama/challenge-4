@@ -1,4 +1,4 @@
-#Coding Quiz - Challenge 4
+# Coding Quiz - Challenge 4
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -8,21 +8,20 @@
 * [Contact](#contact)
 
 
-###About the Project
+### About the Project
 ![Product Name Screen Shot][product-screenshot]
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * HTML
 * CSS
 * JavaScript
 
-###Installation
+### Installation
 Clone the repo
 git clone https://github.com/urbanearthymama/challenge-4
 
-###Contact
+### Contact
 
 Patricia Nelson urbanearthymama@gmail.com
 
