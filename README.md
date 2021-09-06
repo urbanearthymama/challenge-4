@@ -27,4 +27,4 @@ git clone https://github.com/urbanearthymama/challenge-4
 
 Patricia Nelson urbanearthymama@gmail.com
 
-Project Link: https://github.io/urbanearthymama/challenge-4
+Project Link: https://urbanearthymama.github.io/challenge-4/
