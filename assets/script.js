@@ -1,34 +1,68 @@
+let startButton = document.querySelector(".start-btn")
+let startQuizBox = document.querySelector(".start-quiz-box")
+let questionsBox = document.querySelector(".questions-box")
 
-var questions = [
-    {
-        prompt: "The condition in and if / else statement is enclosed with _______________.\n(a) quotes\n(b) curly brackets\n(c) parenthesis\n(d) square brackets",
-        answer: "b"
-    },
-    {
-        prompt: "A very useful tool used during development and debugging for printing content to the debugger is:\n(a) JavaScript\n(b) terminal/bash\n(c) for loops\n(d) console.log",
-        answer: "d" 
-    },
-    {
-        prompt: "String values must be enclosed with ______________ when being assigned to variables.\n(a) commas\n(b) curly brackets\n(c) quotes\n(d) parenthesis",
-        answer: "d"
-    },
-    {   prompt: "Commonly used data types DO NOT include:\n(a) strings\n(b) booleans\n(c) alerts\n(d) numbers",
-        answer: "d"
-    },
-    {
-        prompt: "Arrays in JavaScript can be used to store ______________.\n(a) numbers and strings\n(b) others arrays\n(c) booleans\n(d) all of the above",
-        answer: "d"
-    },
-]
-var score = 0;
-
-for(var i=0; i< questions.length; i++){
-    var response = window.prompt(questions[i].prompt);
-    if (response == questions[i].answer){
-        score++;
-        alert("Correct!");
-    } else {
-        alert("Wrong!");
+var timeLeft = 75;
+var timer = setInterval(() => {
+    timeLeft--;
+    if (timeLeft <=0) {
+        clearInterval(timer);
+        quizOver();
     }
+
+    console.log(timeLeft);
+}, 1000);
+
+function startQuiz() {
+    startQuizBox.classList.add('hide');
+    questionsBox.classList.remove('hide');
+    startTimer();
+    showQuestion();
 }
-alert ("Your high score is  " + score);
+
+startButton.addEventListener('click',startQuiz)
+let question = {
+        prompt: 'The condition in an if / else statement is enclosed with _______________.',
+        alternatives: ['(a) quotes', '(b) curly brackets', '(c) parenthesis', '(d) square brackets'],
+        correctAnswer: 1
+};
+    // {
+    //     prompt: 'A very useful tool used during development and debugging for printing content to the debugger is:',
+    //     alternatives: ['(a) JavaScript', '(b) terminal/bash', '(c) for loops', '(d) console.log',
+    //     correctAnswer: 3 
+    // };
+    // {
+    //     prompt: 'String values must be enclosed with ______________ when being assigned to variables.',
+    //     alternatives: ['(a) commas', '(b) curly brackets', '(c) quotes', '(d) parenthesis'],
+    //     correctAnswer: 3
+    // },
+    // {   prompt: 'Commonly used data types DO NOT include:',
+    //     alternatives: ['(a) strings', '(b) booleans, '(c) alerts', '(d) numbers'],
+    //     correctAnswer: 3
+    // };
+    // {
+    //     prompt: 'Arrays in JavaScript can be used to store ______________.',
+    //     alternatives: ['(a) numbers and strings', '(b) others arrays', '(c) booleans', '(d) all of the above'],
+    //     correctAnswer: "3"
+    // };
+
+    function showQuestion(q) {
+        let promptDiv = document.getElementById('prompt');
+        promptDiv.textContent = q.prompt;
+        let alts = document.querySelectorAll('.alternative');
+        alts.forEach(function(element, index){
+            element.textContent = q.alternatives[index];
+            element.addEventListener('click', function() {
+                if(q.correctAnswer == index) {
+                    console.log('Correct Answer');
+                }
+            })
+        });
+    }
+
+    showQuestion(question);
+
+    // let btn = document.getElementById('btn')
+    // btn.addEventListener('click', function(){
+    //     console.log('Clicked!');
+    // }); 
